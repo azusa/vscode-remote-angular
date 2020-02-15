@@ -23,7 +23,7 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
         && usermod --uid $USER_UID --gid $USER_GID $USERNAME \
         && chown -R $USER_UID:$USER_GID /home/$USERNAME; \
     fi
-
+RUN npm install -g @angular/cli
 # *************************************************************
 # * Uncomment this section to use RUN instructions to install *
 # * any needed dependencies after executing "apt-get update". *
